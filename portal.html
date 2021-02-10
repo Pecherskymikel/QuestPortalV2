@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Quests</title>
+    <style>
+        header{
+            background: url(image/LA-skyline.jpg)no-repeat;
+            height: 1050px;
+            background-size: auto;
+        }
+        body{
+            background-color:black;
+        }
+        .hero-content{
+            text-align:center;
+            max-width:300px;
+            padding:65px;
+            background:rgba(255, 255, 255, 0.801);
+            
+            margin:0 auto;
+            transform:translateY(100%);
+            color:rgba(255, 0, 34, 0.925);
+            border:1mm;
+            border-color:#FFF5EE;
+            border-radius: 20px;
+        }
+        article{
+            font-size: x-large;
+        }
+        *{
+    padding:0px;
+    margin:0px;
+}
+.boxImg{
+    width:500px;
+    height:300px;
+    border:solid rgb(92, 92, 82) 5px;
+    overflow:hidden;
+    position:relative;
+}
+.boxImg img{
+    width:100%;
+    height:auto;
+    transition: 0.5s;
+}
+div.wrapper{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    margin-top:750px;
+}
+div.container{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0px;
+    left:0px;
+
+}
+div.container:before, div.container:after{
+    content: '';
+    width:300px;
+    height:300px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background:#ccc;
+    transition:1s;
+    opacity:0.1;
+}
+div.container:before{
+    transform: translateX(-125%) rotate(45deg);
+}
+div.container:after{
+    transform: translateX(195%) rotate(45deg);
+}
+.text{
+    position: absolute;
+    top:10%;
+    color:#fff;
+    text-align: center;
+    width: 100%;
+    z-index:10;
+
+}
+.text h1{
+    margin-bottom: 15px;
+    font-size:30px;
+    transition: 0.5s;
+    transform:scale(0);
+}
+
+.text p{
+    margin: 0 100px;
+    font-size: 18px;
+    text-align: justify;
+    transition: 0.5s;
+    opacity:0;
+    transform:scale(2);
+}
+a.btn{
+    position: absolute;
+    left:50%;
+    transform:translate(-50%);
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border:solid #fff 2px;
+    margin-top:20px;
+    transition: 0.5s;
+    opacity:0;
+}
+a.btn:active{
+    border:solid #b1b3b3 2px;
+}
+.boxImg:hover img{
+    filter:blur(2px);
+    transform:rotate(-5deg) scale(1.1);
+}
+.boxImg:hover .text h1{
+    transform:scale(1);
+}
+.boxImg:hover .text p{
+    transform:scale(1);
+    opacity:1;
+}
+.boxImg:hover  a.btn{
+    transform:scale(1);
+    opacity:1;
+}
+.boxImg:hover .container::before{
+    transform:translateX(92%) rotate(45deg) scale(2);
+    transition:0.5s;
+    opacity:0.6;
+}
+.boxImg:hover .container::after{
+    transform:translateX(-25%) rotate(-45deg) scale(2);
+    transition:0.5s;
+    opacity:0.6;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="hero-content">
+                <h1>Привет!</h1>
+                <article>Ты попал в портал!) На нашем сайте ты сможешь пройти множество квестов, удачи</article>
+            </div>
+        </header>
+        <div class="wrapper">
+            <div class="boxImg">
+                <img src="image/LA-palm.jpg" alt="photo">
+                <div class="container">
+                    <div class="text">
+                        <h1>Квест 1</h1>
+                        <p>Тут должно быть много текста, но сорян его не будет</p>
+                        <a href="first quest.html" class="btn">First quest</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+    </script>
+</body>
+</html>
