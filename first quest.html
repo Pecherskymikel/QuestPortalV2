@@ -6,51 +6,58 @@
     <title>First quest</title>
     <style>
         body{
-            background-color: rgb(3, 3, 19);
+            background:url(image/desertt.png)no-repeat;
+        }
+        .all{
             display: grid;
-            grid-template-columns: repeat(2, 1fr 1fr);
             grid-template-areas: 
             ".main .main"
+            ".varietes .varietes"
             ".varietes .varietes";
         }
         .main{
             text-align:center;
             max-width:300px;
             padding:65px;
-            background:rgba(108, 35, 204, 0.932);
+            background:rgba(143, 96, 206, 0.932);
             
-            margin:0 auto;
+            margin:75px auto auto;
             transform:translateY(100%);
-            color:rgba(28, 224, 77, 0.925);
+            color:rgba(221, 154, 76, 0.932);
             border:4mm;
             border-color:#5bcc87;
             border-radius: 20px;
-            display: grid;
-        }
-        .article{
-            padding:50px;
             display: grid;
         }
         .varietes{
             display: grid;
             color:ghostwhite;
-            padding:50px;
-            background:rgba(209, 124, 27, 0.932);
+            text-align: center;
+            padding:30px;
+            background:rgba(221, 154, 76, 0.932);
             font-size: larger;
             
-            margin:0 auto;
             transform:translateY(100%);
-            color:rgba(28, 224, 77, 0.925);
+            color:rgba(78, 107, 233, 0.925);
             border:4mm;
             border-color:#5bcc87;
             border-radius: 20px;
         }
+
+        .first{
+            margin:175px auto auto;
+        }
+        .second{
+            margin:100px auto auto;
+        }
     </style>
 </head>
 <body>
+    <div class="all">
     <article class="main article">О ХХХ ходили разные легенды, но все точно знали – именно он создал ИИ, который смог во многом превзойти человека. Также не подвергалось сомнению его творение – книга, которая включала в себя весь его опыт, знания накопленные за долгие годы жизни.</article>
     <article class="varietes first">далее</article>
     <article class="varietes second">далее</article>
+    </div>
     <script>
         let first = document.querySelector(".first");
         let second = document.querySelector(".second");
@@ -85,6 +92,7 @@
                     function func4(){
                         main.innerHTML="В помещении толпились люди, все двигались к нужным аудиториям, со стороны действо напоминало муравейник. Вдруг за руку меня схватил один из студентов, присмотревшись, я узнал в нем Витю – отличника, по совместительству (моего единственного друга/моего хорошего друга) – в зависимости от прошлого выбора, который всегда мог придумать занятие для себя и окружающих. Сейчас он тащил меня на урок истории технологического прогресса. Практического смысла данное мероприятие не имело, но интересные факты и полезная информация подкупали мою любознательность.";
                         first.innerHTML="без понятия что дальше";
+                        first.style.margin = "150px auto auto";
                         second.innerHTML="без понятия что дальше";
                         removeEventListener;
                     }
